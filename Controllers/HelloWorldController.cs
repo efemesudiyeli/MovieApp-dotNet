@@ -29,12 +29,30 @@ namespace MvcMovie.Controllers
 
         }
 
+        [HttpGet]
         public IActionResult AddMovie()
         {
-           
-
+            Console.WriteLine("Get çalıştı");
             return View();
+        }
 
+        [HttpPost]
+        public IActionResult AddMovie(Movie m)
+        {
+            Console.WriteLine("Post çalıştı");
+            contex.Add(m);
+            contex.SaveChanges();
+            
+            return RedirectToAction("Movie");
+        }
+
+        public IActionResult DeleteMovie(int id)
+        {
+            var mov = contex.movies.Find(id);
+            contex.movies.Remove(mov);
+            contex.SaveChanges();
+            
+            return RedirectToAction("Movie");
         }
 
 
@@ -50,7 +68,7 @@ namespace MvcMovie.Controllers
             //     new Movie(){Id=2,Title="Aquaman",ReleaseDate=DateTime.Now.ToString("dd/MM/yyyy"),Genre="Fantastic",Price=40},
             //     new Movie(){Id=3,Title="Family Guy",ReleaseDate=DateTime.Now.ToString("dd/MM/yyyy"),Genre="Comedy",Price=40},
             // };
-            return View(   props      /*mov*/ );
+            return View(props      /*mov*/ );
         }
     }
 }
