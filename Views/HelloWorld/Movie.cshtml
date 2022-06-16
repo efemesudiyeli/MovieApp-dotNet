@@ -1,19 +1,24 @@
-@model List<MvcMovie.Models.Movie>;
+@model List<Movie>;
+@using MvcMovie.Models;
 @{
     ViewData["Title"] = "Movies";
 }
 
+
+<div class="container">
+
 <h2>Movies</h2>
-<table class="table">
-    <thead></thead>
-    <tr>
-        <th scope="col">#</th>
-        <th scope="col">Title</th>
-        <th scope="col">Genre</th>
-        <th scope="col">ReleaseDate</th>
-        <th scope="col">Price</th>
-       
-    </tr>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Genre</th>
+            <th scope="col">ReleaseDate</th>
+            <th scope="col">Price</th>  
+            <th scope="col">Actions</th>
+
+        </tr>
     </thead>
     <tbody>
         @foreach (var movie in Model)
@@ -24,14 +29,17 @@
                 <td>@movie.Genre</td>
                 <td>@movie.ReleaseDate</td>
                 <td>@movie.Price</td>
+                <td>
+                    <a href="" class="btn btn-primary">Details</a>
+                    <a href="" class="btn btn-success">Edit</a>
+                    <a href="" class="btn btn-danger">Delete</a>
+                </td>
+
             </tr>
         }
-
-
-
-
-
-
-
+   
     </tbody>
+  
 </table>
+  <a href="" class="btn btn-primary">Add Movie</a>
+</div>

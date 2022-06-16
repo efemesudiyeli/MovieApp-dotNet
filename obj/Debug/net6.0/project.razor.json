@@ -16308,6 +16308,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\dotNetLearn\\Views\\HelloWorld\\AddMovie.cshtml",
+      "TargetPath": "Views\\HelloWorld\\AddMovie.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\dotNetLearn\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
