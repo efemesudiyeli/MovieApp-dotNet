@@ -7,39 +7,39 @@
 
 <div class="container">
 
-<h2>Movies</h2>
-<table class="table table-striped">
-    <thead class="table-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Genre</th>
-            <th scope="col">ReleaseDate</th>
-            <th scope="col">Price</th>  
-            <th scope="col">Actions</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var movie in Model)
-        {
+    <h2>Movies</h2>
+    <table class="table table-striped">
+        <thead class="table-dark">
             <tr>
-                <th>@movie.Id</th>
-                <td>@movie.Title</td>
-                <td>@movie.Genre</td>
-                <td>@movie.ReleaseDate</td>
-                <td>@movie.Price</td>
-                <td>
-                    <a href="" class="btn btn-primary">Details</a>
-                    <a href="/HelloWorld/GetMovie/@movie.Id" class="btn btn-success">Edit</a>
-                    <a href="/HelloWorld/DeleteMovie/@movie.Id" class="btn btn-danger">Delete</a>
-                </td>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Genre</th>
+                <th scope="col">ReleaseDate</th>
+                <th scope="col">Price</th>
+                <th scope="col">Actions</th>
 
             </tr>
-        }
-   
-    </tbody>
-  
-</table>
-  <a asp-area="" asp-controller="HelloWorld" asp-action="AddMovie" class="btn btn-primary">Add Movie</a>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <th>@movie.Id</th>
+                    <td>@movie.Title</td>
+                    <td>@movie.Genre</td>
+                    <td>@movie.ReleaseDate</td>
+                    <td>@movie.Price</td>
+                    <td>
+                        <a href="/HelloWorld/Details/@movie.Id" class="btn btn-primary">Details</a>
+                        <a href="/HelloWorld/GetMovie/@movie.Id" class="btn btn-success">Edit</a>
+                        <a href="/HelloWorld/DeleteMovie/@movie.Id" class="btn btn-danger">Delete</a>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+    <a asp-area="" asp-controller="HelloWorld" asp-action="AddMovie" class="btn btn-primary">Add Movie</a>
 </div>

@@ -42,7 +42,7 @@ namespace MvcMovie.Controllers
             Console.WriteLine("Post çalıştı");
             contex.Add(m);
             contex.SaveChanges();
-            
+
             return RedirectToAction("Movie");
         }
 
@@ -51,11 +51,11 @@ namespace MvcMovie.Controllers
             var mov = contex.movies.Find(id);
             contex.movies.Remove(mov);
             contex.SaveChanges();
-            
+
             return RedirectToAction("Movie");
         }
 
-        
+
         [HttpGet]
         public IActionResult GetMovie(int id)
         {
@@ -66,9 +66,9 @@ namespace MvcMovie.Controllers
 
 
         [HttpPost]
-         public IActionResult GetMovie(Movie m)
+        public IActionResult GetMovie(Movie m)
         {
-             Console.WriteLine("Çalıstı edit");
+            Console.WriteLine("Çalıstı edit");
             var movis = contex.movies.Find(m.Id);
             movis.Title = m.Title;
             movis.Genre = m.Genre;
@@ -80,8 +80,13 @@ namespace MvcMovie.Controllers
             return RedirectToAction("Movie");
         }
 
+        public IActionResult Details(int id)
+        {
+            var movi = contex.movies.Find(id);
+            
+            return View(movi);
+        }
 
-       
 
 
         Context contex = new Context();

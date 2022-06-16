@@ -1,0 +1,24 @@
+
+@using MvcMovie.Models;
+@model MvcMovie.Models.Movie;
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div class="container">
+
+
+
+<div class="card">
+  <h5 class="card-header">@Model.Title</h5>
+  <div class="card-body">
+    <h6 class="card-title">@Model.Genre | <span>@Model.ReleaseDate</span></h6> 
+    <p class="card-text">@Model.Description</p>
+    <a href="#" class="btn btn-primary">Buy @Model.Price$</a> 
+  </div>
+</div>
+
+
+
+</div>
