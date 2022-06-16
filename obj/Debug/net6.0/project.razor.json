@@ -16303,6 +16303,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\dotNetLearn\\Views\\HelloWorld\\GetMovie.cshtml",
+      "TargetPath": "Views\\HelloWorld\\GetMovie.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\dotNetLearn\\Views\\HelloWorld\\Movie.cshtml",
       "TargetPath": "Views\\HelloWorld\\Movie.cshtml",
       "FileKind": "mvc"
@@ -16335,6 +16340,11 @@
     {
       "FilePath": "d:\\dotNetLearn\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\dotNetLearn\\Views\\HelloWorld\\EditMovie.cshtml",
+      "TargetPath": "Views\\HelloWorld\\EditMovie.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -55,6 +55,19 @@ namespace MvcMovie.Controllers
             return RedirectToAction("Movie");
         }
 
+        
+        public IActionResult GetMovie(int id)
+        {
+            var movi = contex.movies.Find(id);
+            return View(movi);
+        }
+
+        [HttpPost]
+        public IActionResult EditMovie()
+        {
+            return View();
+        }
+
 
         Context contex = new Context();
         public IActionResult Movie()
