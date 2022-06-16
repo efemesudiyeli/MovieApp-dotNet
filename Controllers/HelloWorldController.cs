@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 
+using MvcMovie.Models;
+
+
 namespace MvcMovie.Controllers
 {
     public class HelloWorldController : Controller
@@ -8,7 +11,7 @@ namespace MvcMovie.Controllers
         // 
         // GET: /HelloWorld/
 
-        
+
         public IActionResult Index()
         {
             return View();
@@ -17,10 +20,24 @@ namespace MvcMovie.Controllers
         // 
         // GET: /HelloWorld/Welcome/ 
 
-        public string Welcome(string name, int numTimes = 1)
+        public IActionResult Welcome(string name = "Kullanıcı", int numTimes = 2)
         {
-            return ($"Hello {name}, numTimes is: {numTimes}");
+            ViewData["Message"] = "Hello " + name;
+            ViewData["NumTimes"] = numTimes;
 
+            return View();
+
+        }
+
+        public IActionResult Movie()
+        {
+            var mov = new List<Movie>()
+            {
+                new Movie(){Id=1,Title="Titanic",ReleaseDate=DateTime.Now,Genre="Dram",Price=35},
+                new Movie(){Id=2,Title="Aquaman",ReleaseDate=DateTime.Now,Genre="Fantastic",Price=40},
+                new Movie(){Id=3,Title="Family Guy",ReleaseDate=DateTime.Now,Genre="Comedy",Price=40},
+            };
+            return View(mov);
         }
     }
 }
