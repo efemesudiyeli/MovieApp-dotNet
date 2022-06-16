@@ -1,5 +1,5 @@
 @model MvcMovie.Models.Movie;
-@using (Html.BeginForm("MovieUpdate", "HelloWorld", FormMethod.Post)) ;
+
 
 @{
     ViewData["Title"] = "Movies";
@@ -12,8 +12,8 @@
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Title</th>
-                <th scope="col">ReleaseDate</th>
                 <th scope="col">Genre</th>
+                <th scope="col">ReleaseDate</th>
                 <th scope="col">Price</th>
             </tr>
         </thead>
@@ -21,11 +21,8 @@
             <tr>
                 <th> @Html.TextBoxFor(x=>x.Id, new {@class = "form-control", @disabled = "disabled"}  )</th>
                 <td> @Html.TextBoxFor(x=>x.Title, new {@class = "form-control"} )</td>
-                <td> @Html.TextBoxFor(x=>x.ReleaseDate, new {@class = "form-control"} )</td>
-
-
                 <td> @Html.TextBoxFor(x=>x.Genre, new {@class = "form-control"} )</td>
-
+                <td> @Html.TextBoxFor(x=>x.ReleaseDate, new {@class = "form-control"} )</td>
                 <td> @Html.TextBoxFor(x=>x.Price, new {@class = "form-control"} )</td>
             </tr>
         </tbody>

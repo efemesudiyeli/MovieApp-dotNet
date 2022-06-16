@@ -16343,11 +16343,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\dotNetLearn\\Views\\HelloWorld\\EditMovie.cshtml",
-      "TargetPath": "Views\\HelloWorld\\EditMovie.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "d:\\dotNetLearn\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

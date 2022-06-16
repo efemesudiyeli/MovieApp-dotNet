@@ -56,17 +56,32 @@ namespace MvcMovie.Controllers
         }
 
         
+        [HttpGet]
         public IActionResult GetMovie(int id)
         {
             var movi = contex.movies.Find(id);
             return View(movi);
         }
 
+
+
         [HttpPost]
-        public IActionResult EditMovie()
+         public IActionResult GetMovie(Movie m)
         {
-            return View();
+             Console.WriteLine("Çalıstı edit");
+            var movis = contex.movies.Find(m.Id);
+            movis.Title = m.Title;
+            movis.Genre = m.Genre;
+            movis.Price = m.Price;
+            movis.ReleaseDate = m.ReleaseDate;
+
+            contex.SaveChanges();
+
+            return RedirectToAction("Movie");
         }
+
+
+       
 
 
         Context contex = new Context();
