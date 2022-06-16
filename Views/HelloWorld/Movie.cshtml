@@ -16,6 +16,7 @@
                 <th scope="col">Genre</th>
                 <th scope="col">ReleaseDate</th>
                 <th scope="col">Price</th>
+                 <th scope="col">Description</th>
                 <th scope="col">Actions</th>
 
             </tr>
@@ -29,6 +30,7 @@
                     <td>@movie.Genre</td>
                     <td>@movie.ReleaseDate</td>
                     <td>@movie.Price</td>
+                    <td> @movie.Description.Substring(0,57)<span>....</span></td>
                     <td>
                         <a href="/HelloWorld/Details/@movie.Id" class="btn btn-primary">Details</a>
                         <a href="/HelloWorld/GetMovie/@movie.Id" class="btn btn-success">Edit</a>

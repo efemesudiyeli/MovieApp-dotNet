@@ -15,6 +15,7 @@
                 <th scope="col">Genre</th>
                 <th scope="col">ReleaseDate</th>
                 <th scope="col">Price</th>
+                <th scope="col">Description</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
                 <td> @Html.TextBoxFor(x=>x.Genre, new {@class = "form-control"} )</td>
                 <td> @Html.TextBoxFor(x=>x.ReleaseDate, new {@class = "form-control"} )</td>
                 <td> @Html.TextBoxFor(x=>x.Price, new {@class = "form-control"} )</td>
+                <td> @Html.TextBoxFor(x=>x.Description, new {@class = "form-control"} )</td>
             </tr>
         </tbody>
     </table>
