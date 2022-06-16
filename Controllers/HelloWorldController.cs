@@ -32,14 +32,14 @@ namespace MvcMovie.Controllers
         [HttpGet]
         public IActionResult AddMovie()
         {
-            Console.WriteLine("Get çalıştı");
+            
             return View();
         }
 
         [HttpPost]
         public IActionResult AddMovie(Movie m)
         {
-            Console.WriteLine("Post çalıştı");
+            
             contex.Add(m);
             contex.SaveChanges();
 
@@ -68,12 +68,13 @@ namespace MvcMovie.Controllers
         [HttpPost]
         public IActionResult GetMovie(Movie m)
         {
-            Console.WriteLine("Çalıstı edit");
+            
             var movis = contex.movies.Find(m.Id);
             movis.Title = m.Title;
             movis.Genre = m.Genre;
             movis.Price = m.Price;
             movis.ReleaseDate = m.ReleaseDate;
+            movis.Description = m.Description;
 
             contex.SaveChanges();
 
